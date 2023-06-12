@@ -1,0 +1,146 @@
+.container {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+  box-sizing: content-box;
+  transition: border 0.2s ease;
+}
+
+.gradient {
+  background: radial-gradient(93.75% 96.51% at 6.25% 97.32%, #000000 0%, #FFFFFF 150%);
+  mix-blend-mode: overlay;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.face:hover {
+  transform: none;
+}
+
+.eyebrows {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.eyebrow {
+  width: 12px;
+  height: 4px;
+  background-color: black;
+}
+
+.left {
+  transform: rotate(20deg);
+}
+
+.right {
+  transform: rotate(-20deg);
+}
+
+.eyes {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.eye {
+  display: block;
+  background-color: black;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: blink linear 3s infinite;
+}
+
+.angry_mouth {
+  display: block;
+  border: 4px solid black;
+  width: 16px;
+  height: 8px;
+  border-radius: 16px 16px 0 0;
+  border-bottom: none;
+}
+
+.mouth {
+  width: 16px;
+  height: 8px;
+}
+
+.irritated_mouth {
+  display: block;
+  border: 4px solid black;
+  border-radius: 16px 16px 0 0;
+  border-bottom: none;
+}
+
+.neutral_mouth {
+  display: block;
+  height: 4px;
+  background-color: black;
+}
+
+.content_mouth {
+  display: block;
+  border: 4px solid black;
+  border-radius: 0 0 16px 16px;
+  border-top: none;
+}
+
+.happy_mouth {
+  display: block;
+  background-color: black;
+  border-radius: 0 0 16px 16px;
+}
+
+.angry_face {
+  transform: translate(6.5% ,14%);
+}
+
+.irritated_face {
+  transform: translate(6.5% ,7%);
+}
+
+.neutral_face {
+  transform: translate(6.5%, 0%);
+}
+
+.content_face {
+  transform: translate(6.5% ,-7%);
+}
+
+.happy_face {
+  transform: translate(6.5% ,-14%);
+}
+
+@keyframes blink {
+  0% {
+    transform: scaleY(1);
+  }
+
+  5% {
+    transform: scaleY(0);
+  }
+
+  10% {
+    transform: scaleY(1);
+  }
+}
